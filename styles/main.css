@@ -1,0 +1,607 @@
+/* Global Styles */
+
+@font-face {
+  font-family: 'GeneralSans';
+  src: url('../fonts/GeneralSans-Variable.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ClashDisplay'; 
+  src: url('../fonts/ClashDisplay-Variable.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'ClashDisplay', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+/* Header Styling */
+header {
+  background: #fff;
+  padding: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin-left: auto;
+}
+
+nav ul li a {
+  font-family: 'GeneralSans', serif;
+  text-decoration: none;
+  color: #96A0B5;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav ul li a:active {
+  color: #000;
+}
+
+.contact-button {
+  padding: 10px 20px;
+  background: #fff;
+  color: #000;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  border: 1px solid #000;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.contact-button:hover {
+  background: #000;
+  color: #fff;
+}
+
+.heading-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0;
+}
+
+.heading-section .title {
+    font-size: 5rem;
+    line-height: 5rem;
+    font-family: 'ClashDisplay', sans-serif;
+    font-weight: 500;
+    color: #000;
+    flex: 2;
+    text-align: left;
+}
+
+.heading-section .heading-cta {
+  width: 30%;
+}
+
+.heading-section .description {
+    flex: 1.5;
+    text-align: left;
+    margin-left: 20px;
+    font-size: 1.2em;
+    color: #96A0B5;
+}
+
+.heading-section .cta-button {
+    margin: 20px 0px 0px 20px;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.heading-section .cta-button:hover {
+    background-color: #333;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .heading-section {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .heading-section .title {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+  }
+
+  .heading-section .description {
+      margin: 0;
+      font-size: 1em;
+  }
+
+  .heading-section .cta-button {
+      margin-top: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .heading-section .title {
+      font-size: 2em;
+  }
+
+  .heading-section .description {
+      font-size: 0.9em;
+  }
+
+  .heading-section .cta-button {
+      font-size: 0.9em;
+  }
+}
+
+/* Carousel */
+.carousel-section {
+  position: relative;
+  overflow: hidden;
+  height: 400px;
+}
+
+.carousel-cards {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-card {
+  flex: 0 0 60%
+}
+
+.carousel-card img {
+  width: 100%;
+  padding-right: 20px;
+  height: auto;
+}
+
+/* General styling for the services section */
+
+.meet-section {
+  padding: 40px;
+}
+
+.meet-section h2 {
+  color: #96A0B5;
+  font-size: 1rem;
+  font-family: 'GeneralSans', serif;
+  text-align: center;
+}
+
+.meet-section p {
+  color: #000;
+  font-size: 3rem;
+  font-family: 'ClashDisplay', serif;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.meet-grid {
+  display: flex;
+  justify-content: space-between;
+}
+
+.meet-grid .meet-item {
+  width: 49.25%;
+}
+
+.meet-grid .meet-half-items {
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  width: 49.25%;
+}
+
+.meet-grid img {
+  width: 100%;
+}
+
+/* General styling for the news section */
+.news-section {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding-bottom: 80px;
+}
+
+.news-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.news-section p {
+  font-family: 'GeneralSans', serif;
+  color: #96A0B5;
+  font-size: 1rem;
+  margin-bottom: 40px;
+}
+
+.news-top {
+  padding: 60px 40px 0 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.news-text-container {
+  width: 50%;
+  text-align: left;
+}
+
+/* Styling for the navigation arrows */
+.news-navigation {
+  width: 10%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none;
+  margin-top: 70px;
+}
+
+.news-navigation button {
+  border: none;
+  font-size: 2rem;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  color: black;
+  cursor: pointer;
+}
+
+.news-navigation button:not(.disabled) {
+  background-color: white;
+}
+
+.news-navigation button.disabled {
+  background-color: grey;
+  cursor: not-allowed;
+}
+
+/* Styling for the news cards container */
+.news-cards-wrapper {
+  position: relative;
+  overflow: hidden;
+  padding-left: 30px;
+}
+
+.news-cards {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Individual news card styling */
+.news-card {
+  border: 1px solid #333;
+  width: 300px;
+  margin: 0 10px;
+  padding: 20px;
+  text-align: left;
+  flex-shrink: 0;
+}
+
+.news-card img {
+  width: 100%;
+}
+
+.news-card h3 {
+  font-size: 24px;
+  margin: 15px 0;
+}
+
+.news-card p {
+  font-size: 16px;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .novidades-section h2 {
+      font-size: 28px;
+  }
+
+  .novidades-section p {
+      font-size: 16px;
+  }
+
+  .news-card {
+      width: 250px;
+  }
+
+  .news-navigation button {
+      font-size: 20px;
+  }
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .novidades-section h2 {
+      font-size: 28px;
+  }
+
+  .novidades-section p {
+      font-size: 16px;
+  }
+
+  .news-card {
+      width: 100%;
+  }
+
+  .news-navigation button {
+      font-size: 20px;
+  }
+}
+
+
+/* Services Section Styling */
+.services-section {
+  padding: 40px;
+  background-color: #fff;
+}
+
+.services-section h2 {
+  font-family: 'ClashDisplay', sans-serif;
+  font-size: 3rem;
+  padding: 30px 0px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ADABAB;
+  text-align: left;
+}
+
+.service-item {
+  display: flex;
+  align-items: center;
+  padding-bottom: 60px;
+}
+
+.service-item img {
+  width: 40%;
+  height: 100%;
+  margin-right: 20px;
+}
+
+.service-item-content {
+  flex: 1;
+  padding: 0px 20% 0px 20px;
+}
+
+.service-item-content h3 {
+  font-family: 'ClashDisplay', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.service-item-content p {
+  font-family: 'GeneralSans', serif;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #96A0B5;
+}
+
+.service-item-content a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.service-item-content a:hover {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .service-item {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .service-item img {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+
+  .service-item-content {
+      margin: 0;
+  }
+}
+
+/* Footer Styles */
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 40px 60px;
+  text-align: left;
+}
+
+/* Top Content */
+.footer-top-content {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.footer-top-content h1 {
+  font-family: 'ClashDisplay', sans-serif;
+  font-size: 4rem;
+  margin-bottom: 20px;
+  width: 60%;
+}
+
+.footer-button-content {
+  width: 40%;
+  margin-top: 40px;
+}
+
+.footer-button-content p {
+  font-family: 'GeneralSans', serif;
+  color: #96A0B5;
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+.footer-button-content button {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 25px;
+  font-family: 'GeneralSans', serif;
+  font-weight: bold;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.footer-button-content button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Middle Content */
+.footer-middle-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.footer-middle-content img {
+  max-width: 100px;
+  margin-bottom: 20px;
+}
+
+.footer-middle-content p {
+  flex: 1 100%;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #96A0B5;
+}
+
+.footer-info {
+  flex: 1;
+  margin-right: 200px;
+}
+
+.footer-section {
+  margin-top: 70px;;
+  flex: 1;
+}
+
+.footer-section h3 {
+  font-family: 'GeneralSans', serif;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section ul {
+  font-family: 'GeneralSans', serif;
+  font-size: 1rem;
+  color: #96A0B5;
+
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li a {
+  font-family: 'GeneralSans', serif;
+  color: #96A0B5;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Bottom Content */
+.footer-bottom-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #555;
+  padding-top: 20px;
+}
+
+.footer-logo {
+  max-width: 100px;
+  margin-right: 30%;
+}
+
+.footer-social {
+  text-align: center;
+}
+
+.footer-social a {
+  margin: 0 3px;
+  display: inline-block;
+}
+
+.footer-social img {
+  width: 24px;
+  height: 24px;
+}
+
+.footer-copyright {
+  text-align: left;
+  color: #96A0B5;
+  font-size: 0.75rem;
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .footer-middle-content,
+  .footer-bottom-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-button-content {
+    text-align: center;
+  }
+
+  .footer-section {
+    text-align: center;
+  }
+}
